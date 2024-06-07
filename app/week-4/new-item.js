@@ -42,7 +42,7 @@ export default function NewItem()
     }
 
     return (
-        <form className="p-1 m-4 bg-green-600 text-black max-w-sm w-full h-40" onSubmit={handleSubmit} >
+        <form className="rounded p-2 m-4 bg-green-600 text-black max-w-sm w-full h-40" onSubmit={handleSubmit} >
             <div className="mb-2">
                 <input type="text" placeholder="Item name" required className="w-full mt-1 border-2 border-gray-300 p-2 rounded-lg font-sans" value={name} onChange={handleName}/>
             </div>
@@ -63,7 +63,7 @@ export default function NewItem()
                     <option value="other">Other</option>
                 </select>
             </div>
-            <button type="submit" className="w-full mt-4 mb-10 p-1 bg-lime-300 text-black font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75">+</button>
+            <button type="submit" className="w-full mt-3 p-1 bg-lime-300 text-black font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75">+</button>
         </form>
     );
 
