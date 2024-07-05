@@ -39,7 +39,7 @@ export default function ItemList({items, onItemSelect})
             </div>
             <ul>
                 { 
-                    [...items].sort(sortBy === "name" ? sortByName : sortByCategory).map((item) => <Item key={item.id} item={item} onSelect={onItemSelect}/>)
+                    [...items].sort(sortBy === "name" ? sortByName : sortByCategory).map((item) => <Item key={item.id} item={item} onSelect={onItemSelect} />)
                 }
             </ul>
         </div>
