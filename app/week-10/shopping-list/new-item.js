@@ -13,7 +13,7 @@ export default function NewItem({onAddItem})
 
 
         let item = {
-            id: "",
+            id: Array(20).fill().map(() => String.fromCharCode(Math.floor(Math.random() * 26) + (Math.random() < 0.5 ? 65 : 97))).join(''),
             name: name,
             quantity: quantity,
             category: category

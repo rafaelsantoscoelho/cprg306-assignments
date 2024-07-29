@@ -31,7 +31,7 @@ export default function LoginPage() {
                 {
                     user ? (
                         <div className="text-lg text-white">
-                            <p>Signed in as {user.displayName} ({user.email} -  {user.uid}).</p>
+                            <p>Signed in as {user.displayName} ({user.email}).</p>
                             <p>
                                 <button onClick={handleSignOut} className="text-lg hover:underline">Sign out</button>
                             </p>

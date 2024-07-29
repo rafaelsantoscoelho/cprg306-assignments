@@ -14,22 +14,12 @@ export default function Page() {
     const [items, setItems] = useState([]);
     const [selectedItemName, setSelectedItemName] = useState("");
 
-    async function loadItems() {
-        try {
-            
-            itemsArray = dbGetItems(user.uid);
-            console.log(itemsArray);
-            setItems(itemsArray);
-    
-        } catch (error) {
-            console.log(error);
-        }
-    }
-
     useEffect(() => {
-        loadItems();
+        if (!user) return;
 
-    }, [items]);
+        dbGetItems(user.uid, setItems);
+  
+    }, [user]);
 
     function handleAddItem(item) {
         const id = dbAddItem(user.uid, item);
@@ -52,7 +42,7 @@ export default function Page() {
     //  console.log(user.uid);
 
     return (
-        <main className="bg-slate-950 p-2 m-2">
+        <main className="bg-slate-950 p-2 m-2 h-full">
             <h2 className="text-3xl font-bold mb-4 text-white">Shopping List</h2>
             <div className="flex">
                 <div className="flex-1 max-w-sm m-2">
